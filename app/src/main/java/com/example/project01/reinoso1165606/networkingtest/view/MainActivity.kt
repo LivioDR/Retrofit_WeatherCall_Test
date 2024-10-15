@@ -33,12 +33,12 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch {
             // getting the results from the API call - London, ON coordinates passed
             val weatherResult =
-            service.listWeather(42.9929,-81.2418)
+            service.listWeather(42.9929,-81.2418) // this is a suspend function
 
-            // printing the result on console
-            println(weatherResult.current.temperature_2m)
+            // printing the full result on console
+            println(weatherResult)
 
-            // showing the result in the UI
+            // and showing the current temperature from the result in the UI
             label.text = "Current temperature: ${weatherResult.current.temperature_2m}°C"
         }
 

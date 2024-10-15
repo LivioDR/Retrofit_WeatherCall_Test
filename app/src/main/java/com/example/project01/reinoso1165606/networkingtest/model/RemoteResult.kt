@@ -1,5 +1,6 @@
 package com.example.project01.reinoso1165606.networkingtest.model
 
+// base data class used to receive the results from the API call made with Retrofit
 data class RemoteResult(
     val current: Current,
     val current_units: CurrentUnits,
